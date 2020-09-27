@@ -1,0 +1,30 @@
+
+hide visibility
+skinparam class {
+BackgroundColor eae7e7
+BorderColor Black
+}
+skinparam classAttributeIconSize 0
+
+class Mem {
+	Mem()
+	Mem(int t_, int p_, int l_, bool i_)
+l : int
+	p : int
+	t : int
+	intron : bool
+	isNew : bool
+	operator==(const Mem& m) : bool {query}
+	AnnNode : lemon::ListDigraph::Node
+	NovNode : lemon::ListDigraph::Node
+	toStr() : std::string {query}
+	toStrCat() : std::string {query}
+	setAnnNode(lemon::ListDigraph::Node node_) : void
+	setNovNode(lemon::ListDigraph::Node node_) : void
+}
+
+
+hide circle
+
+
+

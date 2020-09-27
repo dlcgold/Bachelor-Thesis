@@ -1,0 +1,226 @@
+\documentclass[a4paper,12pt, oneside]{book}
+
+% \usepackage{fullpage}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphics}
+\usepackage{amsfonts}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{engrec}
+\usepackage{rotating}
+\usepackage{verbatim}
+\usepackage[safe,extra]{tipa}
+\usepackage{showkeys}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{fontspec}
+\usepackage{enumerate}
+\usepackage{braket}
+\usepackage{marginnote}
+\usepackage{pgfplots}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{framed}
+\usepackage{pdfpages}
+\usepackage{pgfplots}
+\usepackage{algorithm}
+% \usepackage{algpseudocode}
+\usepackage[cache=false]{minted}
+\usepackage{mathtools}
+\usepackage[noend]{algpseudocode}
+\usepackage{svg}
+
+\usepackage{tikz}\usetikzlibrary{er}\tikzset{multi  attribute /.style={attribute
+    ,double  distance =1.5pt}}\tikzset{derived  attribute /.style={attribute
+    ,dashed}}\tikzset{total /.style={double  distance =1.5pt}}\tikzset{every
+  entity /.style={draw=orange , fill=orange!20}}\tikzset{every  attribute
+  /.style={draw=MediumPurple1, fill=MediumPurple1!20}}\tikzset{every
+  relationship /.style={draw=Chartreuse2,
+    fill=Chartreuse2!20}}\newcommand{\key}[1]{\underline{#1}}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows,shapes,backgrounds,petri} 
+\usetikzlibrary{automata,positioning}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[LE,RO]{\slshape \rightmark}
+\fancyhead[LO,RE]{\slshape \leftmark}
+\fancyfoot[C]{\thepage}
+
+\title{Relazione}
+
+\author{Davide Cozzi\\
+  829827\\
+  \href{mailto:d.cozzi@campus.unimib.it}{d.cozzi@campus.unimib.it}}
+\date{}
+
+\pgfplotsset{compat=1.13}
+\begin{document}
+\maketitle
+
+\definecolor{shadecolor}{gray}{0.80}
+\setlist{leftmargin = 2cm}
+\newtheorem{teorema}{Teorema}
+\newtheorem{definizione}{Definizione}
+\newtheorem{esempio}{Esempio}
+\newtheorem{corollario}{Corollario}
+\newtheorem{lemma}{Lemma}
+\newtheorem{osservazione}{Osservazione}
+\newtheorem{nota}{Nota}
+\newtheorem{esercizio}{Esercizio}
+
+\algdef{SE}[DOWHILE]{Do}{doWhile}{\algorithmicdo}[1]{\algorithmicwhile\ #1}
+\tableofcontents
+\renewcommand{\chaptermark}[1]{%
+  \markboth{\chaptername
+    \ \thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\MYhref}[3][blue]{\href{#2}{\color{#1}{#3}}}%
+
+\chapter{Introduzione}
+\section{Accenni di biologia molecolare}
+\subsection{DNA ed RNA}
+Prima di iniziare la trattazione più squisitamente computazionale è bene dare
+un'introduzione dal punto di vista biologico di quanto trattato.\\
+Il \textbf{DNA}, sigla corrispondente ad \textbf{acido desossiribonucleico}, è
+un acido nucleico contenente le informazioni necessarie al corretto sviluppo di
+un essere vivente. Dal punto di vista chimico questa particolare macromolecola
+si presenta nella tipica \textbf{struttura a doppia elica}, formata da due
+lunghe catene di nucleotidi, dette \textbf{strand}. Nel dettaglio i singoli
+nucleotidi sono formati da un \textbf{gruppo fosfato}, il
+\textbf{desossiribosio}, uno \textbf{zucchero pentoso} e una \textbf{base
+  azotata}. Si hanno, inoltre, 4 tipi diversi di basi azotate:
+\begin{enumerate}
+  \item \textbf{Adenina}, indicata con la lettera $A$
+  \item \textbf{Citosina}, indicata con la lettera $C$
+  \item \textbf{Guanina}, indicata con la lettera $G$
+  \item \textbf{Timina}, indicata con la lettera $T$
+\end{enumerate}
+Come abbiamo detto abbiamo quindi due \textbf{strand}, uno detto \textbf{forward
+strand} (indicato solitamente col simbolo ``+'') e uno detto \textbf{backward
+strand} (indicato solitamente col simbolo ``-'') che sono direzionati nel verso 
+opposto (in termini tecnici si ha che il forward strand va da 5' UTR a 3' UTR,
+mentre il backward strand da 3' UTR a 5' UTR) e sono \textit{appaiati} mediante
+coppie ben precise di basi azotate.
+\newpage
+Infatti, secondo il \textbf{modello di
+  Watson-Crick}, si ha che: 
+\begin{itemize}
+  \item l'\textbf{Adenina} si appaia con la \textbf{Timina}
+  \item la \textbf{Citosina} si appaia con la \textbf{Guanina}
+\end{itemize}
+Questo accoppiamento permette di poter studiare i due \textbf{strand} come uno
+``complementare'' all'altro. Conoscendo infatti la sequenza di basi azotate di
+uno \textbf{strand} è possibile ricavare la sequenza dell'altro mediante la
+tecnica del \textbf{Reverse\&Complement} dove, preso uno strand, si converte
+ogni sua basse secondo il seguente schema:
+\begin{itemize}
+  \item le $A$ diventano $T$
+  \item le $T$ diventano $A$
+  \item le $C$ diventano $G$
+  \item le $G$ diventano $C$
+\end{itemize}
+Per riferirci al \textbf{DNA} contenuto in una data cellula di un essere vivente
+usiamo il termine \textbf{genoma}, che a sua volta viene organizzato in diversi
+\textbf{cromosomi}. Si definisce \textbf{gene} una particolare regione di un
+\textbf{cromosoma} in grado di codificare una proteina. \\
+Ai fini della trattazione del progetto è necessario introdurre anche
+l'\textbf{RNA}, sigla corrispondente a \textbf{acido ribonucleico} (avendo il
+\textbf{ribosio} come zucchero pentoso), ovvero una
+molecola, simile al \textbf{DNA}, dotata di una singola 
+catena nucleotidica, sempre con 4 tipi di basi azotate (anche se si ha
+l'\textbf{Uracile}, che si indica con la lettera $U$, al posto della
+\textbf{Timina}). Tra i compiti dell'\textbf{RNA} si ha quello della codifica e
+decodifica dei \textbf{geni}.
+\begin{figure}[H]
+  \centering
+  \includesvg[scale = 0.8]{img/dna.svg}
+  \caption{Rappresentazione grafica del DNA }
+  %sistemare cit
+\end{figure}
+\subsection{Esoni, Introni e Splicing alternativo}
+Per ottenere una \textbf{proteina} da un \textbf{gene} si hanno 3 steps:
+\begin{enumerate}
+  \item \textbf{Trascrizione}, dove la sequenza del gene è copiata
+  nel \textbf{pre-messenger RNA (pre-mRNA)} 
+  \item \textbf{Splicing}, dove vengono rimosse le parti non codificanti dalla
+  molecola di \textbf{pre-mRNA}, formando il \textbf{messenger RNA (mRNA)}
+  \item \textbf{Traduzione}, dove viene effettivamente codificata la proteina
+\end{enumerate}
+Ai fini di questo progetto ci si concentra sullo \textbf{splicing}.\\
+Per poter trattare al meglio questa fase bisogna parlare in primis di
+\textbf{esoni} e \textbf{introni}. Gli \textbf{esoni} sono le parti codificanti
+di un gene mentre gli \textbf{introni} sono le porzioni non codificanti.\\
+Durante un evento di splicing ``regolare'' vengono rimossi gli introni e gli
+esoni rimasti formano l'\textbf{mRNA}, detto anche \textbf{trascritto}.
+\begin{figure}[H]
+  \centering
+  \includesvg[scale = 0.4]{img/spli.svg}
+  \caption{Rappresentazione grafica di un ``regolare'' evento di splicing, con
+    gli esoni rappresentati in blu e gli introni in verde nel gene, e con il
+    trascritto formato dai solo esoni}
+  %sistemare cit
+\end{figure}
+Nella realtà però un gene è in grado di sintetizzare più di una proteina
+mediante il cosiddetto \textbf{splicing alternativo}, che consiste in diverse
+varianti dell'evento di splicing al fine di ottenere diversi trascritti. Si
+descrivono le principali modalità di splicing alternativo:
+\begin{itemize}
+  \item \textbf{exon skipping}, ovvero \textit{salto dell'esone}, dove un esone
+  (o anche più esoni) può essere escluso dal trascritto primario
+  \item \textbf{alternative acceptor site}, ovvero \textit{}
+  \item \textbf{intron retention}, ovvero \textit{introne trattenuto}, dove un
+  certo introne viene incluso nel trascritto primario
+\end{itemize}
+%valutare se inserire svg e se inserire gli altri eventi
+Le varie modalità di splicing alternativo non si escludono a vicenda, rendendo
+lo studio di tale fenomeno assai complesso.\\
+Il progetto \textbf{ASGAL} (\textit{\textbf{A}lternative \textbf{S}plicing
+  \textbf{G}raph \textbf{AL}igner}) è nato con lo scopo di studiare, dal punto
+di vista computazionale, tali eventi
+
+\chapter{Preliminari}
+\section{Pipeline di AGSAL}
+\section{Formato dei files}
+\subsection{Genoma}
+\subsection{Annotazione}
+\subsection{RNA-Seq sample}
+\section{Splicing graph}
+\subsection{Linearizzazione dello splicing graph}
+\section{Bitvector}
+\subsection{Rank}
+\subsection{Select}
+\section{Allineamento}
+\subsection{Maximal Exact Matches}
+\subsection{MEM graph}
+\chapter{Metodo}
+\section{Riconoscimento degli Introni}
+\subsection{Differenziazione dei MEM}
+\section{Estensione del MEM graph}
+\subsection{Completamento del MEM graph esonico}
+\subsection{Costruzione del MEM graph intronico}
+\section{Visualizzazione con IGV}
+\section{Sperimentazione mediante Snakemake}
+\subsection{Pipeline della sperimentazione}
+\chapter{Risultati}
+\section{Confronto della qualità dei risultati}
+\section{Confronto delle performances}
+\chapter{Conclusioni}
+\chapter{Bibliografia}
+
+\end{document}
+
+% LocalWords:  Asgal Splicing Graph read MEMs Seq sample splicing gap factor
+% LocalWords:  linearizzazione img jpg introne sottostringa sse overlap Edit
+% LocalWords:  sottostringhe Dijkstra reads MEM graph fasta fastaq gtf features
+% LocalWords:  exons bitvector select rank seq dell esonico DAG intronico all
+% LocalWords:  esoniche intronici pseudocodice find new IGV AGSAL mem files
+% LocalWords:  Snakemake performances Maximal Exact Matches acceptor plicing

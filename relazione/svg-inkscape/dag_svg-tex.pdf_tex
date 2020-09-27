@@ -1,0 +1,78 @@
+%% Creator: Inkscape 1.0 (4035a4fb49, 2020-05-01), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'dag_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{444.99998474bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.90707021)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{dag_svg-tex.pdf}}%
+    \put(0.35562092,0.04378185){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}run_after_checkpoint\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{dag_svg-tex.pdf}}%
+    \put(0.35562092,0.20543793){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}generatePlot\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{dag_svg-tex.pdf}}%
+    \put(0.2096814,0.36709401){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}compareMemIntron\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{dag_svg-tex.pdf}}%
+    \put(0.52401266,0.36709401){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}compareMemNoExon\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{dag_svg-tex.pdf}}%
+    \put(0.16702216,0.52875008){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}generateMemIntron\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{dag_svg-tex.pdf}}%
+    \put(0.85406052,0.52875008){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}generateMemNoIntron\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{dag_svg-tex.pdf}}%
+    \put(0.34214958,0.69040616){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}removeExon\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{dag_svg-tex.pdf}}%
+    \put(0.54646489,0.52875008){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}generateMemNoExon\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{dag_svg-tex.pdf}}%
+    \put(0.48584387,0.85206224){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}downloadGenome\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{dag_svg-tex.pdf}}%
+    \put(0.64300953,0.69040616){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}generateReads\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{dag_svg-tex.pdf}}%
+  \end{picture}%
+\endgroup%
